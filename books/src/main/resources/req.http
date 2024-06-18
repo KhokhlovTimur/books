@@ -1,0 +1,39 @@
+POST http://localhost:8080/author
+Content-Type: application/json
+
+{
+  "name": "name1",
+  "surname": "surname1",
+  "age": 40
+}
+
+###
+GET http://localhost:8080/authors
+
+###
+DELETE http://localhost:8080/author/1
+
+###
+PATCH http://localhost:8080/author/1
+Content-Type: application/json
+
+{
+  "name": "updated name 1"
+}
+
+###
+POST http://localhost:8080/book
+Content-Type: application/json
+
+{
+  "title": "Стрелок",
+  "isbn": "123123132312312321",
+  "authorId": 3
+}
+
+###
+GET http://localhost:8080/books?title=Стрелок&isbn=123123132312312321&authorId=1
+
+###
+DELETE http://localhost:8080/book/1
+
